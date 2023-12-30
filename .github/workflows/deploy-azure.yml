@@ -6,7 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - silentstorm
 on:
   push:
     branches:
-      - branch-0.50.2
+      - master
   workflow_dispatch:
 
 jobs:
