@@ -4,7 +4,7 @@ echo "Deleting existing builds"
 
 rm -rf dist/*
 
-SRC_DIR=dist/trilium-src
+SRC_DIR=../dist/trilium-src
 
 bin/copy-trilium.sh $SRC_DIR
 

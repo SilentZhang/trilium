@@ -5,12 +5,13 @@ if [[ $# -eq 0 ]] ; then
     exit 1
 fi
 
-n exec 18.18.2 npm run webpack
+#n exec 18.18.2 npm run webpack
+npm run webpack
 
 DIR=$1
 
 rm -rf $DIR
-mkdir $DIR
+mkdir -p $DIR
 
 echo "Copying Trilium to build directory $DIR"
 
@@ -27,7 +28,7 @@ cp -r electron.js $DIR/
 cp webpack-* $DIR/
 
 # run in subshell (so we return to original dir)
-(cd $DIR && n exec 18.18.2 npm install --only=prod)
+(cd $DIR && npm install --only=prod)
 
 # cleanup of useless files in dependencies
 rm -r $DIR/node_modules/image-q/demo
