@@ -14,6 +14,11 @@ cp -r $SRC_DIR ./dist/trilium-linux-x64-server
 cp -r $SRC_DIR ./dist/trilium-windows-x64-src
 cp -r $SRC_DIR ./dist/trilium-mac-x64-src
 
+# install wine
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install -y wine
+
 bin/build-win-x64.sh DONTCOPY
 
 bin/build-mac-x64.sh DONTCOPY
