@@ -1,0 +1,1 @@
+./bin/build-win-x64.sh
